@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7ff;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 25px;
+    display: none;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* Mobile menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        padding: 20px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 160px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex;
+    }
+}
+
+/* Hero */
+/* ---- FIX 1: Hero Section ---- */
+.hero {
+    min-height: 60vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+/* ---- FIX 2: Space between sections ---- */
+section {
+    margin-top: 40px;
+}
+
+/* ---- FIX 3: Features section cards alignment ---- */
+.cards {
+    margin: 40px auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* ---- FIX 4: Contact form spacing ---- */
+.contact form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.hero-content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    text-decoration: none;
+    background: white;
+    color: #2575fc;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+/* Responsive Cards */
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About */
+.about {
+    padding: 60px 30px;
+    text-align: center;
+    background: #fefefe;
+}
+
+/* Contact */
+.contact {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Footer */
+.footer {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #2575fc;
+}
