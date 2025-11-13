@@ -30,3 +30,7 @@ This project is simple, lightweight, and perfect for academic submissions, portf
 
 ## 📁 Project Structure
 
+project-folder/
+│── index.html
+│── style.css
+
